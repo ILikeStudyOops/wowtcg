@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.csq.mapper.CardHeroMapper">
+
+    <resultMap id="BaseResultMap" type="org.csq.entity.CardHero">
+            <id property="fkCordId" column="fk_cord_id" jdbcType="INTEGER"/>
+            <result property="camp" column="camp" jdbcType="INTEGER"/>
+            <result property="occupation" column="occupation" jdbcType="INTEGER"/>
+            <result property="hp" column="hp" jdbcType="INTEGER"/>
+            <result property="flipCost" column="flip_cost" jdbcType="INTEGER"/>
+            <result property="skill" column="skill" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        fk_cord_id,camp,occupation,
+        hp,flip_cost,skill
+    </sql>
+</mapper>

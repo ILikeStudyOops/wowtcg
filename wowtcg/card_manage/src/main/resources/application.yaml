@@ -1,0 +1,21 @@
+server:
+  port: 8081
+spring:
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+  application:
+    name: card-manage
+  datasource:
+    url: jdbc:mysql://localhost:3306/wowtcg?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  level:
+    org.csq: debug
+  pattern:
+    dataformat: yyyy年MM月dd日 HH:mm:ss:SSS

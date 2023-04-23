@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: wowtcg-gateway
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1
+    gateway:
+      routes:
+        - id: card-manage
+          uri: lb://card-manage
+          predicates:
+            - Path=/wowtcg-card/**
+          filters:
+            - StripPrefix=1

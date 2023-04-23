@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.csq.mapper.VersionMapper">
+
+    <resultMap id="BaseResultMap" type="org.csq.entity.Version">
+            <id property="versionId" column="version_id" jdbcType="INTEGER"/>
+            <result property="versionName" column="version_name" jdbcType="VARCHAR"/>
+            <result property="versionEngName" column="version_eng_name" jdbcType="VARCHAR"/>
+            <result property="cardCount" column="card_count" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        version_id,version_name,version_eng_name,
+        card_count
+    </sql>
+</mapper>

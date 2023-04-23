@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.csq.mapper.DeckMapper">
+
+    <resultMap id="BaseResultMap" type="org.csq.entity.Deck">
+            <id property="deckId" column="deck_id" jdbcType="INTEGER"/>
+            <result property="deckName" column="deck_name" jdbcType="VARCHAR"/>
+            <result property="cardList" column="card_list" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        deck_id,deck_name,card_list
+    </sql>
+</mapper>
